@@ -91,7 +91,6 @@ OUTPUT: static_function_in_type.cc
       "qual_name_offset": 12,
       "short_name": "Register",
       "spell": "5:11-5:19|5:1-6:2|1026|-1",
-      "comments": "static",
       "bases": [],
       "vars": [13569879755236306838],
       "callees": [],

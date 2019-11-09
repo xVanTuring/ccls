@@ -21,7 +21,7 @@ OUTPUT:
       "vars": [],
       "alias_of": 0,
       "kind": 5,
-      "parent_kind": 0,
+      "parent_kind": 1,
       "declarations": [],
       "derived": [],
       "instances": [5844987037615239736, 5844987037615239736],

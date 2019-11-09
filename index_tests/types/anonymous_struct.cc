@@ -10,7 +10,7 @@ OUTPUT:
   "skipped_ranges": [],
   "usr2func": [],
   "usr2type": [{
-      "usr": 82,
+      "usr": 106,
       "detailed_name": "",
       "qual_name_offset": 0,
       "short_name": "",
@@ -75,7 +75,7 @@ OUTPUT:
         }],
       "alias_of": 0,
       "kind": 5,
-      "parent_kind": 0,
+      "parent_kind": 1,
       "declarations": [],
       "derived": [],
       "instances": [],
@@ -95,11 +95,11 @@ OUTPUT:
       "uses": []
     }, {
       "usr": 3348817847649945564,
-      "detailed_name": "float vector3::(anon struct)::x",
+      "detailed_name": "float vector3::(anonymous struct)::x",
       "qual_name_offset": 6,
       "short_name": "x",
       "spell": "2:18-2:19|2:12-2:19|1026|-1",
-      "type": 82,
+      "type": 106,
       "kind": 8,
       "parent_kind": 23,
       "storage": 0,
@@ -107,11 +107,11 @@ OUTPUT:
       "uses": []
     }, {
       "usr": 4821094820988543895,
-      "detailed_name": "float vector3::(anon struct)::y",
+      "detailed_name": "float vector3::(anonymous struct)::y",
       "qual_name_offset": 6,
       "short_name": "y",
       "spell": "2:21-2:22|2:12-2:22|1026|-1",
-      "type": 82,
+      "type": 106,
       "kind": 8,
       "parent_kind": 23,
       "storage": 0,
@@ -119,11 +119,11 @@ OUTPUT:
       "uses": []
     }, {
       "usr": 15292551660437765731,
-      "detailed_name": "float vector3::(anon struct)::z",
+      "detailed_name": "float vector3::(anonymous struct)::z",
       "qual_name_offset": 6,
       "short_name": "z",
       "spell": "2:24-2:25|2:12-2:25|1026|-1",
-      "type": 82,
+      "type": 106,
       "kind": 8,
       "parent_kind": 23,
       "storage": 0,

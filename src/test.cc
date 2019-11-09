@@ -228,6 +228,12 @@ void verifySerializeToFrom(IndexFile *file) {
                         std::nullopt /*expected_version*/);
   std::string actual = result->toString();
   if (expected != actual) {
+    FILE *f = fopen("/tmp/0", "w");
+    fwrite(expected.c_str(), expected.size(), 1, f);
+    fclose(f);
+    f = fopen("/tmp/1", "w");
+    fwrite(actual.c_str(), actual.size(), 1, f);
+    fclose(f);
     fprintf(stderr, "Serialization failure\n");
     // assert(false);
   }
@@ -260,17 +266,6 @@ findDbForPathEnding(const std::string &path,
 bool runIndexTests(const std::string &filter_path, bool enable_update) {
   gTestOutputMode = true;
   std::string version = LLVM_VERSION_STRING;
-
-  // Index tests change based on the version of clang used.
-  static const char kRequiredClangVersion[] = "6.0.0";
-  if (version != kRequiredClangVersion &&
-      version.find("svn") == std::string::npos) {
-    fprintf(stderr,
-            "Index tests must be run using clang version %s, ccls is running "
-            "with %s\n",
-            kRequiredClangVersion, version.c_str());
-    return false;
-  }
 
   bool success = true;
   bool update_all = false;
@@ -368,6 +363,9 @@ bool runIndexTests(const std::string &filter_path, bool enable_update) {
           }
         }
       });
+
+  pipeline::g_quit.store(true, std::memory_order_relaxed);
+  completion.quit();
 
   return success;
 }
